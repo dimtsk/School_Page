@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="/style CSS/style.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/main js/main.js"></script>
+    <!-- link for the icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body id="pic5">
+    <div class="container">
+        <h4><i class='fas fa-book-reader fa-2x'></i> INSERT ASSIGNMENTS INFORMATION</h4><br><br>
+        <form action="">
+            <div class="form-group">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="title" 
+                name="title" placeholder="School project A" pattern="[a-zA-Z]+" 
+                title="Invalid input. Use only characters (a-zA-Z)" tabindex="1" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="description" class="form-label">Description:</label>
+                <textarea class="form-control" rows="2" cols="50" maxlength="200" 
+                id="description" name="description" placeholder="Enter description..." 
+                pattern="[a-zA-Z]+" title="Invalid input. Use only characters (a-zA-Z)"
+                tabindex="2" required></textarea>
+            </div><br>
+
+            <div class="form-group">
+                <label for="date" class="form-label">Submission date:</label>
+                <input type="date" class="form-control" id="date" 
+                name="date" tabindex="3" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="oralmark" class="form-label">Oral Mark:</label>
+                <input type="number" class="form-control" id="oralmark" 
+                name="oralmark" min="0" max="100"pattern="[0-9]+" 
+                title="Invalid input. Use only numbers (0-9)" tabindex="4" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="totalmark" class="form-label">Τotal Mark:</label>
+                <input type="number" class="form-control" id="totalmark" 
+                name="totalmark" min="0" max="100" pattern="[0-9]+" 
+                title="Invalid input. Use only numbers (0-9)"tabindex="5" required>
+            </div><br>
+
+            <div>
+                <button type="submit" class="btn">submit</button>
+                <button type="reset" class="reset">Edit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

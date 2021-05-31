@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="/style CSS/style.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/main js/main.js"></script>
+    <!-- link for the icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body id="pic">
+    <div class="container">
+        <h4><i class='fas fa-user-graduate fa-2x'></i> INSERT STUDENTS INFORMATION</h4><br><br>
+        <form action="">
+            <div class="form-group">
+                <label for="fname" class="form-label">Firstname:</label>
+                <input type="text" class="form-control" id="fname" 
+                name="fname" placeholder="John" pattern="[a-zA-Z]+" 
+                title="Invalid input. Use only characters (a-zA-Z)"tabindex="1" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="sname" class="form-label">Surname:</label>
+                <input type="text" class="form-control" id="sname" 
+                name="sname" placeholder="Xristou" pattern="[a-zA-Z]+" 
+                title="Invalid input. Use only characters (a-zA-Z)" tabindex="2" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="birth" class="form-label">Date of Birth:</label>
+                <input type="date" class="form-control" id="birth" min="1971-01-01" max="2003-01-01"
+                name="birth" tabindex="3" required>
+            </div><br>
+
+            <div>
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="reset">Edit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

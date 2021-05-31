@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <!--LINKS TO FOLDERS-->
+    <link rel="stylesheet" href="/style CSS/style.css" media="all">
+    <script src="/main js/main.js"></script>
+    <!---->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!--ICONS LINK-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!--FOR THE DATE VALIDATION & MORE-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" />
+
+</head>
+<body id="pic3">
+    <div class="container">
+        <h4><i class='fas fa-laptop-code fa-2x'></i> INSERT COURSE INFORMATION</h4><br><br>
+        <!--FORM-->
+        <form action="">
+            <!--COURSE SELECT TAG-->
+            <div class="form-group">
+                <label for="course" class="form-label">Course:</label> 
+                <select name="course" class="form-control" tabindex="1" required>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <!--TYPE SELECT TAG-->
+            <div class="form-group">
+                <label for="type" class="form-label">Type:</label>
+                <select name="course" class="form-control" tabindex="3" required>
+                    <option value="fulltime">Full Time</option>
+                    <option value="parttime">Part Time</option>
+                </select>
+            </div><br>
+            <!--STREAM INPUT-->
+            <div class="form-group">
+                <label for="stream" class="form-label">Stream:</label>
+                <input type="text" class="form-control" id="stream" 
+                name="stream" maxlength="4" placeholder="CB11" tabindex="2" required>
+            </div><br>
+            <!--START DATE INPUT-->
+            <div class="form-group">
+                <label for="startdate" class="form-label">Start Date:</label>
+                <input type="text" class="form-control" id="dateStart"
+                name="start" tabindex="4" required>
+            </div><br>
+            <!--END DATE INPUT-->
+            <div class="form-group">
+                <label for="enddate" class="form-label">End Date:</label>
+                <input type="text" class="form-control" id="dateEnd"
+                name="end" tabindex="5" required>
+            </div><br>
+            <!--BUTTONS-->
+            <div>
+                <button type="submit" class="btn">submit</button>
+                <button type="reset" class="reset">Edit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<!--IF USER SELECTS START DATE, THE END DATE CAN NOT BE EQUAL OF LESS THAN THE START DATE-->
+        <script> 
+            function populateEndDate() {
+                var date2 = $('#dateStart').datepicker('getDate');
+                date2.setDate(date2.getDate() + 1);
+                $('#dateEnd').datepicker('setDate', date2);
+                $("#dateEnd").datepicker("option", "minDate", date2);
+                }
+
+            $(document).ready(function() {
+
+                $("#dateStart").datepicker({
+                    dateFormat: "dd-M-yy",
+                    minDate: 'dateToday',
+                    onSelect: function(date) {
+                    populateEndDate();
+                    }
+                }).datepicker("setDate", new Date());
+                $('#dateEnd').datepicker({
+                    dateFormat: "dd-M-yy",
+                    minDate: 1,
+                    onClose: function() {
+                    var dt1 = $('#dateStart').datepicker('getDate');
+                    var dt2 = $('#dateEnd').datepicker('getDate');
+                    if (dt2 <= dt1) {
+                        var minDate = $('#dateEnd').datepicker('option', 'minDate');
+                        $('#dateEnd').datepicker('setDate', minDate);
+                    }
+                    }
+                }).datepicker("setDate", new Date());
+            });
+        </script>
+</html>

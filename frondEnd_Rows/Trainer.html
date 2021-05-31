@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="/style CSS/style.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/main js/main.js"></script>
+    <!-- link for the icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body id="pic4">
+    <div class="container">
+        <h4><i class='fas fa-chalkboard-teacher fa-2x'></i> INSERT TRAINERS INFORMATION</h4><br><br>
+        <form action="">
+            <div class="form-group">
+                <label for="fname" class="form-label">Firstname:</label>
+                <input type="text" class="form-control" id="fname" 
+                name="fname" placeholder="John" pattern="[a-zA-Z]+" 
+                title="Invalid input. Use only characters (a-zA-Z)"tabindex="1" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="sname" class="form-label">Surname:</label>
+                <input type="text" class="form-control" id="sname" 
+                name="sname" placeholder="Xristou" pattern="[a-zA-Z]+" 
+                title="Invalid input. Use only characters (a-zA-Z)"tabindex="2" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="course" class="form-label">Course:</label> 
+                <select name="course" class="form-control" tabindex="1" required>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit" class="btn">submit</button>
+                <button type="reset" class="reset">Edit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

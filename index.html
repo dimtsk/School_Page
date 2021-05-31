@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coding Bootcamp 2021</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--STYLE AND MORE-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <style>
+    .jumbotron{
+        background: url('/img/2.jpg');
+        background-repeat: no-repeat;
+        background-position: left;
+        text-align: center;
+        border-bottom: 3px solid black;
+        height: 250px;
+    }
+    nav{
+    width: 100%;
+    height: 30px;
+    }
+
+    ul{
+        margin-inline-start: auto; /*placement of navbar*/
+    }
+
+    ul li{
+        list-style: none;/*removes bullets*/
+        display: inline-block; /*takes the links next to each other*/
+        line-height: 100px;/*equals to height: 100px; of .nav so the va==navbar can be always align in center*/
+    }
+
+    ul li a{
+        display: block;
+        text-decoration: none; /*removes underline*/
+        font-size: 20px;
+        font-family: sans-serif;
+        color: black;
+        padding: 0 20px;
+    }
+
+    ul li a:hover{
+        color: #ff1010;
+    }
+  </style>
+ 
+ 
+</head>
+<body>
+    <div class="jumbotron">	
+    	<h1>Coding Bootcamp 2021</h1>
+        <p>A new generation of programmers!</p>
+        <!--NAVIGATION BAR-->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-fluid h-100">
+        <!--LAYOUT OF FRONT PAGE-->
+            <div class="row myimg">
+                <div class="col-md-3" > 
+                <img src="img/student.jpg" height="250px" width="350px" alt="pic">          
+                <h2>Students</h2>
+                <p>Add/Edit form for  <b>Students</b> for the <strong> CB13 Bootcamp</strong></p>
+                <a href="frondEnd_Rows/StudentForm.html" target="_blank">See More</a>
+                </div>
+
+                <div class="col-md-3 ">
+                    <img src="img/course.jpg" height="250px" width="350px" alt="pic"> 
+                    <h2>Courses</h2>
+                    <p>Add/Edit form for  <b>Courses</b> for the <strong> CB13 Bootcamp</strong></p>
+                    <a href="frondEnd_Rows/CourseForm.html" target="_blank">See More</a>
+                </div>
+
+                <div class="col-md-3">
+                    <img src="img/trainer.jpg" height="250px" width="350px" alt="pic"> 
+                    <h2>Trainers</h2>
+                    <p>Add/Edit form for  <b>Trainers</b> for the <strong> CB13 Bootcamp</strong></p>
+                    <a href="frondEnd_Rows/Trainer.html" target="_blank">See More</a>
+                </div>
+
+                <div class="col-md-3" >
+                    <img src="img/assignment.jpg" height="250px" width="350px" alt="pic"> 
+                    <h2>Assignments</h2>
+                    <p>Add/Edit form for  <b>Assignments</b> for the <strong> CB13 Bootcamp</strong></p>
+                    <a href="frondEnd_Rows/Assignment.html" target="_blank">See More</a>
+                </div>
+            </div>
+        </div>   
+
+</body>
+</html>

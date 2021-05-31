@@ -1,0 +1,179 @@
+:root{
+    --font-color: #555;
+    --font-hover-color:orange;
+    --font-hover-btn-color: black;
+}
+body,html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;/*pic cover-fits the page*/
+    font-family:sans-serif;
+    /* background-color: #f5f5f5; */
+    margin: 0;
+    height: 100%;
+}
+
+h4{
+    text-align: center;
+    color: #777;
+}
+  
+.container{
+    width: 400px;
+    box-shadow: 0 15px 35px #2C3539,
+    0 5px 15px #B6B6B4; /*shadow border for the form*/
+    padding: 3em;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid  #000000;
+    /* background-color: #fff;
+    background-color: #ddd; */
+    
+}
+
+.form-group{
+    margin-bottom: 1.5em; /*space between lines*/
+}
+
+.form-label{
+    font-size: .75em; /*size of the labels inside form (ex. Your Name label)*/
+    color: var(--font-color); /*from the :root*/
+    display: block; /*gets the label uppon the input text*/
+    opacity: 0;
+    transition: all.3s; /*animates when you click to input*/
+    transform:translateX(-50px);/*align the labels*/
+}
+
+.form-control{
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ccc;
+    border-style: none none solid none; /* top-right-buttom-left side*/
+    width: 100%;
+    font-size: 1.00em;
+}
+
+.form-control::placeholder{
+    color:#aaa; /*color of placeholder*/
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--font-hover-color); /*buttom underline color*/
+    outline: none; /*inputs outline off*/
+}
+
+.form-group:focus-within{ /*if we have a focus something will happend*/
+    /* border:1px solid orange; */
+    transform: scale(1.1,1.1); /*something like animation*/
+}
+
+.form-control:invalid:focus{ /*color of invalid input*/
+    border-color: red;
+}
+/*!!!with adding -> :focus <- html want show as the green-red color but only when we click on the inputs*/
+.form-control:valid:focus{ /*color of valid input*/
+    border-color: green;
+}
+
+.btn-item, button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px; 
+    border: none;
+    background: linear-gradient(to right,#ff105f, #ffad06);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    }
+
+.btn{
+    width: 100%;
+    margin:30px auto;
+    text-align: center;
+}
+.reset{
+    width: 100%;
+    margin:30px auto;
+    text-align: center;
+}
+
+button:hover, .btn-item:hover {
+    background: #ff1010;
+    }
+
+textarea{
+    resize: none; /*not give the ability to user to change the size of textarea*/
+}
+
+/*hides the plaseholders and gets the labels into their place
+We do that in cause the browser supports that option(nor all browsers 
+supports that )*/
+.focused > .form-label{
+    opacity: 1;
+    transform:translateX(0px);    
+}
+
+#pic {    
+    background-image: url("/img/1.jpg"); /* The image used */
+    height: 100%;     /* Full height */
+    background-position: center;     /* Center and scale the image nicely */
+    background-repeat: no-repeat;   /**/
+    background-size: cover;         /**/
+  }
+  #pic3 {    
+    background-image: url("/img/3.jpg"); 
+    height: 100%;    
+    background-position: center;    
+    background-repeat: no-repeat;   
+    background-size: cover;         
+  }
+
+  #pic4 {   
+    background-image: url("/img/4.jpg"); 
+    height: 100%;    
+    background-position: center;    
+    background-repeat: no-repeat;   
+    background-size: cover;         
+  }
+
+  #pic5 {   
+    background-image: url("/img/5.jpeg"); 
+    height: 100%;    
+    background-position: center;    
+    background-repeat: no-repeat;   
+    background-size: cover;         
+  }
+
+  nav{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 3px solid black;
+}
+
+ul{
+    margin-left: 100px; /*placement of navbar*/
+}
+
+ul li{
+    list-style: none;/*removes bullets*/
+    display: inline-block; /*takes the links next to each other*/
+    line-height: 100px;/*equals to height: 100px; of .nav so the va==navbar can be always align in center*/
+}
+
+ul li a{
+    display: block;
+    text-decoration: none; /*removes underline*/
+    font-size: 40px;
+    font-family: sans-serif;
+    color: black;
+    padding: 0 20px;
+}
+
+ul li a:hover{
+    color: red;
+}
